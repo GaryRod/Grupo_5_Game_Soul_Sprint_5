@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include ('../partials/head') %> 
+
+<body class="body">
+    <main class="main--registro-login animate__animated animate__fadeInDown">
+        <form action="#" method="post" class="form-contenedor">
+            <div class="logo">
+                <a href="/"><img src="/images/logo/Game-Soul.png" class="logo-img"></a>
+            </div>
+            <div class="form__primera-seccion">
+                <span class="form__subtitulo-span">REGISTRATE O INICIA SESIÓN CON TUS REDES SOCIALES</span>
+                <ul class="lista-iconos-registro">
+                    <li class="iconos-facebook"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="iconos-twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li class="iconos-instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <section class="form-registro">
+                    <div class="contenedor-iniciarSesion">         
+                        <label class="tenesCuenta-registro">¿Tenés una cuenta?</label>
+                        <div><a href="/users/login" class="button-iniciarSesion">Iniciar Sesión</a></div>
+                    </div> 
+
+                    <div class="contenedor-nombreRegistro">
+                        <label class="nombre-registro">Nombre:</label>
+                        <input type="text" name="nombre" class="input-nombre" required>
+                    </div>
+
+                    <div class="contenedor-emailRegistro">
+                        <label class="email-registro">E-mail:</label>
+                        <input type="email" name="email" class="input-email" required>
+                    </div>
+
+                    <div class="contenedor-contraseña">
+                        <label class="contraseña-registro">Contraseña:</label>
+                        <input type="password" name="contraseña" class="input-contraseña" required>
+                    </div>
+
+                    <div class="contenedor-fechaDeNacimiento">
+                        <label class="fechaDeNacimiento-registro">Fecha de nacimiento:</label>
+                        <input type="date" name="fechaNacimiento" class="input-fechaNacimiento" required>
+                    </div>  
+
+                    <div class="contenedor-tyc">
+                        <label for="tyc">Términos y condiciones</label>
+                        <input type="checkbox" id="tyc" name="checkbox" class="input-checkbox" required>
+                    </div> 
+
+                    <div class="contenedor-botonCrear">        
+                        <button type="submit" name="crearCuenta" class="button-crearCuenta">Crear Cuenta</button>
+                    </div>    
+            </section> 
+        </form>
+    </main>
+
+    <%- include ('../partials/footer') %> 
+
+</body>
+</html>

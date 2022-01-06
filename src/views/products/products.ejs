@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include ('../partials/head', {title: "Productos"}) %> 
+<body class="body">
+    <%- include('../partials/header')  %> 
+
+    <main class="main main--index">
+        <section class="section-sec">
+            <h3 class="section-sec__titulo">Todos nuestros productos</h3>
+            <aside class="section-sec__filtro">
+                <div>
+                    <h4>Filtrar por...</h4>
+                </div>
+                <div class="section-sec__filtro-h5">
+                    <h5>Género:</h5>
+                </div>
+                
+                <div class="section-sec__filtro-div">
+                    <span><label>Acción</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Aventura</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Estrategia</label><input type="radio" class="section-sec__filtro-input"></span>
+                </div>
+                
+                <div class="section-sec__filtro-h5">
+                    <h5>Precio:</h5>
+                </div>
+
+                <div class="section-sec__filtro-div">
+                    <label>Desde:</label>
+                    <input type="number" value="10000" class="section-sec__filtro-number">
+                    <label>Hasta:</label>
+                    <input type="number" class="section-sec__filtro-number">
+                </div>
+
+                <div class="section-sec__filtro-h5">
+                    <h5>Edición:</h5>
+                </div>
+
+                <div class="section-sec__filtro-div">
+                    <span><label>Estándar</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Deluxe</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Gold</label><input type="radio" class="section-sec__filtro-input"></span>
+                </div>
+            </aside>
+            <div class="section-sec__cont-arts">
+
+                <% producto.forEach(element => { %>
+                    <article class="section-sec__arts">
+
+                        <div class="section-sec__cont-picture-star">
+                            <picture class="section-sec__picture">
+                                <img src="../images/juegos/<%= element.img %>" alt="cyberpunk-2077" class="section-sec__imgs">
+                            </picture>
+                            <div class="section-sec__cont-star">
+                                <i class="fas fa-star section-sec__star"></i>
+                            </div>
+                        </div>
+
+                        <div class="section-sec__cont-datos">
+                            <span class="section-sec__spans"><a href="/productDetail/<%= element.id %>" class="section-sec__titulo-enlace"><%= element.nombre %></a></span>
+                            <span class="section-sec__spans">$ <%= element.precio %></span>
+                            <span class="button-carrito">Añadir al carrito</span>
+                        </div>
+
+                        
+                    </article>
+                <% }) %>        
+            </div>
+        </section>
+    </main>
+
+    <%- include ('../partials/footer') %> 
+</body>
+    
+</html>

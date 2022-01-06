@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include ('../partials/head', {title: "Detalles"}) %> 
+
+</head>
+<body class="body">
+
+    <%- include('../partials/header')  %>
+
+    <main class="main main-detail">
+        <section class="juego">
+            <div class="nombre__juego">
+                <span><%= producto.nombre %></span>
+            </div>
+
+            <div class="cont-img__juego">
+                <img src="/images/juegos/<%= producto.img %>" alt="COD-Black-Ops-4" class="cont-img__img">
+            </div>
+
+            <div class="cont-ediciones-plataformas">
+                <div class="cont-plataformas">
+                    <div class="plataformas">
+                        <span>Plataformas</span>
+                    </div>
+
+                    <div class="cont__consolas">
+                        <div class="ps5"><img class="img-logo__plataformas" src="/images/iconos/PlayStation_5_Logo.svg"></div>
+                        <div class="xbox"><img class="img-logo__plataformas" src="/images/iconos/Xbox_Logo.svg"></div>
+                        <div class="pc"><img class="img-logo__plataformas" src="/images/iconos/Windows_Logo.svg"></div>
+                    </div>
+                </di>
+
+                <div class="cont-ediciones">
+                    <span class="edicion">Edicion</span>
+                    <div class="ediciones">
+                        <button class="estandar">Estandar</button>
+                        <button class="estandar">Deluxe</button>
+                        <button class="estandar">Gold</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detalles">
+            <div class="detalles__primer-fila">
+                <div class="precio">$ <%= producto.precio %></div>
+
+                <div class="cont__añadir" >
+                    <button type="submit" class="añadir__carrito-fav">Añadir al carrito</button>
+                    <div class="detail-cont-star">
+                        <i class="fas fa-star detail-star"></i>
+                        <p>Añadir a favoritos</p>
+                    </div>
+                </div>
+
+                <div class="stock">
+                    <span>Stock</span>
+                </div>
+                <div class="cont__genero">
+                    <p>Genero</p>
+                </div>
+            </div>
+
+            <div class="contenido">
+                <div class="cont-datos">
+                    <button class="video">Videos</button>
+                    <button class="descripcion"> Descripción</button>
+                    <button class="ficha-tecnica">Ficha técnica</button>
+                </div>
+
+                <div class="cont__detalles">
+                    <p>
+                        <%= producto.descripcion %>
+                    </p>
+                </div>
+            </div>
+
+            <div class="cont__edicion">
+                <a href="/products/<%= producto.id %>/edit" class="añadir__carrito-fav cont__edicion-editar">Editar Producto</a>
+                <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="action-button delete añadir__carrito-fav">Eliminar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+</html>

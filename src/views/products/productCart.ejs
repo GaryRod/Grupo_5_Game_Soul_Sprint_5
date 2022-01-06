@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include ('../partials/head', {title: "Carrito"})%>
+
+<body class="body body--carrito">
+
+    <%- include('../partials/header')  %>
+
+    <main class="main">
+        <form method="POST" action>
+            <section class="carrito">
+                <article class="carrito__juegos">
+                    <div class="carrito__img-juego">
+                        <picture>
+                            <source media="(max-width: 481px)" srcset="../images/juegos/ACValhalla-100px.jpg">
+                            <source media="(max-width: 769px)" srcset="../images/juegos/ACValhalla-150px.jpg">
+                            <img src="../images/juegos/ACValhalla-150px.jpg" alt="ACValhalla">
+                        </picture>
+                        <span class="carrito__juego">Assassin's Creed: Valhalla</span>
+                    </div>
+
+                    <div class="carrito__i-precio-cant">
+                        <img src="../images/iconos/trash.svg" class="carrito__i-trash">
+                        <p>1</p>
+                        <p>$ 1000</p>
+                    </div>
+                </article>
+
+                <article class="carrito__juegos">
+                    <div class="carrito__img-juego">
+                        <picture>
+                            <source media="(max-width: 481px)" srcset="../images/juegos/age-of-empires-4-100px.jpg">
+                            <source media="(max-width: 769px)" srcset="../images/juegos/age-of-empires-4-150px.jpg">
+                            <img src="../images/juegos/age-of-empires-4-150px.jpg" alt="age-of-empires-4">
+                        </picture>
+                        <span class="carrito__juego">Age Of Empires 4</span>
+                    </div>
+
+                    <div class="carrito__i-precio-cant">
+                        <img src="../images/iconos/trash.svg" class="carrito__i-trash">
+                        <p>1</p>
+                        <p>$ 1000</p>
+                    </div>
+                </article>
+
+                <article class="carrito__juegos">
+                    <div class="carrito__img-juego">
+                        <picture>
+                            <source media="(max-width: 481px)" srcset="../images/juegos/God_of_War-100px.jpg">
+                            <source media="(max-width: 769px)" srcset="../images/juegos/God_of_War-150px.jpg">
+                            <img src="../images/juegos/God_of_War-150px.jpg" alt="God_of_War">
+                        </picture>
+                        <span class="carrito__juego">God Of War 4</span>
+                    </div>
+
+                    <div class="carrito__i-precio-cant">
+                        <img src="../images/iconos/trash.svg" class="carrito__i-trash">
+                        <p>1</p>
+                        <p>$ 1000</p>
+                    </div>
+                </article>
+
+                <div class="carrito__cod-total">
+                    <div class="carrito__cod">
+                        <p>Código:</p>
+                        <input type="text">
+                    </div>
+                    <p class="carrito__total">$ 1000</p>
+                </div>
+            </section>
+
+            <section class="pagar-metodos">
+                <div class="pagar-metodos__cont">
+                    <h2 class="pagar-metodos__titulo">Elige un método de pago</h2>
+                    <ul class="metodo-pago__lista">
+                        <li class="metodo-pago__items">
+                            <label for="tarjeta" class="metodo-pago__label">Tarjeta
+                                <input type="radio" id="tarjeta" name="pago">
+                            </label>
+                        </li>
+                        <li class="metodo-pago__items">
+                            <label for="google-play" class="metodo-pago__label">Google Pay
+                                <input type="radio" id="google-play" name="pago">
+                            </label>
+                        </li>
+                        <li class="metodo-pago__items">
+                            <label for="mercado-pago" class="metodo-pago__label">Mercado Pago
+                                <input type="radio" id="mercado-pago" name="pago">
+                            </label>
+                        </li>
+                        <li class="metodo-pago__items">
+                            <label for="paypal" class="metodo-pago__label">Paypal
+                                <input type="radio" id="paypal" name="pago">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="metodo-pago__pagar">
+                    <button type="submit" class="metodo-pago__boton">Comprar</button>
+                </div>
+            </section>
+        </form>
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+</html>

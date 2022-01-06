@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ('../partials/head', {title: "Búsqueda"}) %>
+
+<body class="body">
+
+    <%- include ('../partials/header') %> 
+
+    <main>
+        <% if (products.length > 0) {
+            products.forEach(function(element){  
+                let finalPrice = (element.price * ((100 - element.discount) / 100)).toFixed(0) %>
+            <a href="products/detail/<%= element.id %>" class="section-sec__titulo-enlace">
+                <article class="section-sec__arts">
+
+                    <div class="section-sec__cont-picture-star">
+                        <picture class="section-sec__picture">
+                            <img src="/images/juegos/<%= element.img %>" alt="<% element.alt %>" class="section-sec__imgs">
+                        </picture>
+                        <div class="section-sec__cont-star">
+                            <i class="fas fa-star section-sec__star"></i>
+                        </div>
+                    </div>
+
+                    <div class="section-sec__cont-datos">
+                        <span class="section-sec__spans"><%= element.nombre %></span>
+                        <span class="section-sec__spans">$ <%= element.precio %></span>
+                        <span class="button-carrito">Añadir al carrito</span>
+                    </div>
+
+                    
+                </article>
+            </a>
+            <% })} else { %>
+						<div class="col-12">
+							<h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+						</div>
+						<% } %>
+    </main>
+
+
+    <%- include ('../partials/footer') %> 
+</body>
+</html>

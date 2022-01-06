@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include ('../partials/head', {title: "Crear Producto"}) %>
+
+<body class="body body--createProduct body--registro-login">
+
+    <%- include ('../partials/header') %>
+    
+    <main class="main main--createProduct">
+        <form action="" method="post" class="formCreateProduct animate__animated animate__fadeInDown" enctype="multipart/form-data">
+            
+            <div class="form__seccion-nombre">
+                <h5 class="form__seccion-h5">Nombre del producto:</h5>
+                <input type="text" class="input__create-product" name="nombre" placeholder="Nombre del producto..." required>
+            </div>
+            
+            <div class="form__seccion-descripcion">
+                <h5 class="form__seccion-h5">Descripción del producto:</h5>
+                <input type="textarea" class="input__create-product" name="descripcion" placeholder="Descripción del producto..." required>
+            </div>
+            
+            <div class="form__seccion-img">
+                <h5 class="form__seccion-h5">Inserta una imagen:</h5>
+                <input type="file" class="input__create-product" accept=".png, .jpg" multiple name="imagen" required>
+            </div>
+            
+            <div class="form__seccion-categoria">
+                <h5 class="form__seccion-h5">Selecciona un género:</h5>
+                <select class="input__create-product" name="genero" required>
+                    <option value="accion">Acción</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="fps">FPS</option>
+                    <option value="estrategia">Estrategia</option>
+                    <option value="deportes">Deportes</option>
+                </select>
+            </div>
+            
+            <div class="form__seccion-edicion">
+                <h5 class="form__seccion-h5">Selecciona una edición:</h5>
+                <select class="input__create-product" name="edicion" required>
+                    <option value="estandar">Estándar</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="gold">Gold</option>
+                </select>
+            </div>
+            
+            <div class="form__seccion-precio">
+                <h5 class="form__seccion-h5">Escribe un precio:</h5>
+                <input type="text" class="input__create-product" name="precio" required>
+            </div>
+
+            <div class="form__seccion-inputCrear">
+                <input type="submit" class="boton-enviar-producto" value="Crear Producto">
+            </div>
+        </form>
+    </main> 
+
+    <%- include ('../partials/footer') %>
+
+</body>
+</html>

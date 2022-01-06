@@ -1,0 +1,18 @@
+[{
+    "id": 1,
+    "nombre": "Usuario",
+    "apellido": "Administrador",
+    "email": "admin@gamesoul.com",
+    "contraseña": "admin12345",
+    "categoria": "administrador",
+    "imagen": ".../images/iconos/usuario-128px.png"
+},
+{
+    "id": 2,
+    "nombre": "Usuario",
+    "apellido": "Normal",
+    "email": "usuario@gamesoul.com",
+    "contraseña": "usuario12345",
+    "categoria": "usuario",
+    "imagen": ".../images/iconos/usuario-128px.png"
+}]

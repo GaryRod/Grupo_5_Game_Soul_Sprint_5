@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include ('./partials/head', {title: "Home"}) %>
+
+<body class="body">
+
+    <%- include('./partials/header')  %>
+
+    <main class="main main--index">
+
+        <h2 class="section-ppal__titulo">Recomendados</h2>
+        <section class="section-ppal">
+            <% recomendados.forEach(element => { %>
+
+                <article class="section-ppal__art">
+                    <picture class="section-ppal__picture">
+                        <source media="(max-width: 480px)" srcset="">
+                        <source media="(max-width: 769px)" srcset="">
+                        <img src="/images/juegos/<%= element.img2 %>" alt="<%= element.nombre %>" class="section-ppal__img">
+                    </picture>
+                    <div class="section-ppal__datos-imgs-button">
+                        <div class="section-ppal__datos">
+                            <span class="section-ppal__spans section-ppal__spans--titulo"><a href="products/detail/<%= element.id %>" class="section-ppal__titulo-enlace"><%= element.nombre %></a></span>
+                            <span class="section-ppal__spans section-ppal__spans--precio">Precio: $ <%= element.precio %></span>
+                            <span class="section-ppal__spans">Disponibilidad</span>
+                        </div>
+
+                        <div class="section-ppal__cont-imgs-button">
+                            <div class="section-ppal__cont-imgs">
+                                <div class="section-ppal__cont-div-imgs">
+                                    <div class="section-ppal__div-imgs">
+                                        <img src="/images/juegos/COD-Black-Ops-4-1.jpg" alt="COD-1" class="section-ppal__imgs">
+                                    </div>
+
+                                    <div class="section-ppal__div-imgs">
+                                        <img src="/images/juegos/COD-Black-Ops-4-2.jpg" alt="COD-2" class="section-ppal__imgs">
+                                    </div>
+                                </div>
+
+                                <div class="section-ppal__cont-div-imgs">
+                                    <div class="section-ppal__div-imgs">
+                                        <img src="/images/juegos/COD-Black-Ops-4-3.jpg" alt="COD-3" class="section-ppal__imgs">
+                                    </div>
+
+                                    <div class="section-ppal__div-imgs">
+                                        <img src="/images/juegos/COD-Black-Ops-4-4.jpg" alt="COD-4" class="section-ppal__imgs">
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="button-carrito button-carrito--ppal">Añadir al carrito</span>
+                        </div>
+                    </div>
+                </article>
+            <% }) %>
+        </section>
+
+        <section class="section-sec">
+            <h3 class="section-sec__titulo">Más visitados por la comunidad</h3>
+            <div class="section-sec__cont-arts">
+
+                <% masVistos.forEach(element => { %>
+                    <a href="products/detail/<%= element.id %>" class="section-sec__titulo-enlace">
+                        <article class="section-sec__arts">
+                            <div class="section-sec__cont-picture-star">
+                                <picture class="section-sec__picture">
+                                    <img src="/images/juegos/<%= element.img %>" alt="<% element.nombre %>" class="section-sec__imgs">
+                                </picture>
+                                <div class="section-sec__cont-star">
+                                    <i class="fas fa-star section-sec__star"></i>
+                                </div>
+                            </div>
+
+                            <div class="section-sec__cont-datos">
+                                <span class="section-sec__spans"><%= element.nombre %></span>
+                                <span class="section-sec__spans">$ <%= element.precio %></span>
+                                <span class="button-carrito">Añadir al carrito</span>
+                            </div>
+                        </article>
+                    </a>
+                <% }) %>
+            </div>
+        </section>
+
+        <section class="section-sec">
+            <h3 class="section-sec__titulo">Basado en tu última visita</h3>
+            <div class="section-sec__cont-arts">
+
+                <% visitados.forEach(element => { %>
+                    <a href="products/detail/<%= element.id %>" class="section-sec__titulo-enlace">
+                        <article class="section-sec__arts">
+
+                            <div class="section-sec__cont-picture-star">
+                                <picture class="section-sec__picture">
+                                    <img src="/images/juegos/<%= element.img %>" alt="<% element.alt %>" class="section-sec__imgs">
+                                </picture>
+                                <div class="section-sec__cont-star">
+                                    <i class="fas fa-star section-sec__star"></i>
+                                </div>
+                            </div>
+
+                            <div class="section-sec__cont-datos">
+                                <span class="section-sec__spans"><%= element.nombre %></span>
+                                <span class="section-sec__spans">$ <%= element.precio %></span>
+                                <span class="button-carrito">Añadir al carrito</span>
+                            </div>
+                        </article>
+                    </a>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+
+    <%- include ('./partials/footer') %>
+
+</body>
+</html>

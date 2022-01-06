@@ -1,0 +1,48 @@
+<header class="header">
+    <div class="header__primer-fila">
+        <div>
+            <a href="/"><img src="/images/logo/Game-Soul.png" alt="logo" class="header__logo"></a>
+        </div>
+
+        <form action='/products/search' method='GET' class="cont-search">
+            <input type="search" placeholder="Dime que juego buscas" class="cont-search__input" id="search">
+            <label for="search"><img src="/images/iconos/search.svg" class="cont-search__i"></label> 
+        </form>
+
+        <div class="cont-i">
+            <div class="cont-i__cont-lista-icono">
+                <img src="/images/iconos/user.svg" class="cont-i__iconos con-i__iconos--user">
+                <ul class="cont-i__lista">
+                    <li class="cont-i__items cont-i__items-log"><a href="/users/login" class="cont-i__enlaces">Login</a></li>
+                    <li class="cont-i__items"><a href="/users/register" class="cont-i__enlaces">Register</a></li>
+                </ul>
+            </div>
+            <a href="/products/productCart"><img src="/images/iconos/shop.svg" class="cont-i__iconos"></a>
+            <img src="/images/iconos/burger-menu.svg" class="cont-i__iconos cont-i__iconos--burger-menu">
+        </div>
+    </div>
+
+    <nav class="header__nav">
+        <ul class="header__lista">
+            <li class="header__items"><a href="" class="header__enlaces">Favoritos</a></li>
+            <li class="header__items"><a href="" class="header__enlaces">Ofertas</a></li>
+            <li class="header__items"><a href="/products/create" class="header__enlaces">Crear</a></li>
+            <li class="header__items"><a href="" class="header__enlaces">Consolas</a>
+                <ul class="header__sublista">
+                    <li class="header__subitems"><a href="#" class="header__subenlaces">XBOX</a></li>
+                    <li class="header__subitems"><a href="#" class="header__subenlaces">PC</a></li>
+                    <li class="header__subitems"><a href="#" class="header__subenlaces">PS5</a></li>
+                </ul>
+            </li>
+            <li class="header__items"><a href="" class="header__enlaces">Género</a>
+                <ul class="header__sublista">
+                    <li class="header__subitems"><a href="#" class="header__subenlaces">Acción</a></li>
+                    <li class="header__subitems"><a href="#" class="header__subenlaces">Estrategia</a></li>
+                    <li class="header__subitems"><a href="#" class="header__subenlaces">Deportes</a></li>
+                </ul>
+            </li>
+            <li class="header__items"><a href="" class="header__enlaces">Soporte</a></li>
+            <li class="header__items"><a href="/products" class="header__enlaces">Productos</a></li>
+        </ul>
+    </nav>
+</header>
