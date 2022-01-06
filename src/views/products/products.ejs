@@ -8,38 +8,42 @@
         <section class="section-sec">
             <h3 class="section-sec__titulo">Todos nuestros productos</h3>
             <aside class="section-sec__filtro">
-                <div>
-                    <h4>Filtrar por...</h4>
-                </div>
-                <div class="section-sec__filtro-h5">
-                    <h5>Género:</h5>
-                </div>
-                
-                <div class="section-sec__filtro-div">
-                    <span><label>Acción</label><input type="radio" class="section-sec__filtro-input"></span>
-                    <span><label>Aventura</label><input type="radio" class="section-sec__filtro-input"></span>
-                    <span><label>Estrategia</label><input type="radio" class="section-sec__filtro-input"></span>
-                </div>
-                
-                <div class="section-sec__filtro-h5">
-                    <h5>Precio:</h5>
+                <h4 class="section-sec__filtro-h4">Filtrar por...</h4>
+
+                <div class="section-sec__filtro-padre">
+                    <div class="section-sec__filtro-h5">
+                        <h5>Género:</h5>
+                    </div>
+                    
+                    <div class="section-sec__filtro-div">
+                        <span><label for="input-radio">Acción</label><input id="input-radio" type="radio" class="section-sec__filtro-input"></span>
+                        <span><label for="input-radio-2">Aventura</label><input id="input-radio-2" type="radio" class="section-sec__filtro-input"></span>
+                        <span><label for="input-radio-3">Estrategia</label><input id="input-radio-3" type="radio" class="section-sec__filtro-input"></span>
+                    </div>
+                    
+                    <div class="section-sec__filtro-h5">
+                        <h5>Precio:</h5>
+                    </div>
+    
+                    <div class="section-sec__filtro-div">
+                        <span><label for="input-number" class="section-sec__filtro-label-number">Desde:</label><input type="number" id="input-number" value="10000" min="10000" class="section-sec__filtro-number"></span>
+                        <span><label for="input-number-2"  class="section-sec__filtro-label-number">Hasta:</label><input type="number" id="input-number-2" value="15000" min="10001" max="50001" class="section-sec__filtro-number"></span>
+                    </div>
+    
+                    <div class="section-sec__filtro-h5">
+                        <h5>Edición:</h5>
+                    </div>
+    
+                    <div class="section-sec__filtro-div">
+                        <span><label for="input-radio-number">Estándar</label><input id="input-radio-number" type="radio" class="section-sec__filtro-input"></span>
+                        <span><label for="input-radio-number-2">Deluxe</label><input id="input-radio-number-2" type="radio" class="section-sec__filtro-input"></span>
+                        <span><label for="input-radio-number-3">Gold</label><input id="input-radio-number-3" type="radio" class="section-sec__filtro-input"></span>
+                    </div>
                 </div>
 
-                <div class="section-sec__filtro-div">
-                    <label>Desde:</label>
-                    <input type="number" value="10000" class="section-sec__filtro-number">
-                    <label>Hasta:</label>
-                    <input type="number" class="section-sec__filtro-number">
-                </div>
 
-                <div class="section-sec__filtro-h5">
-                    <h5>Edición:</h5>
-                </div>
-
-                <div class="section-sec__filtro-div">
-                    <span><label>Estándar</label><input type="radio" class="section-sec__filtro-input"></span>
-                    <span><label>Deluxe</label><input type="radio" class="section-sec__filtro-input"></span>
-                    <span><label>Gold</label><input type="radio" class="section-sec__filtro-input"></span>
+                <div class="section-sec__filtro-div-boton">
+                    <button class="section-sec__filtro-boton">Buscar</button>
                 </div>
             </aside>
             <div class="section-sec__cont-arts">
