@@ -338,12 +338,11 @@
 }
 
 .section-sec__filtro-label-number {
-    margin: 5%;
+    margin: 2%;
 }
 
 .section-sec__filtro-div-boton {
     text-align: center;
-    margin: 2%;
 }
 
 .section-sec__filtro-boton {
@@ -351,7 +350,7 @@
     color: #000;
     margin: auto;
     padding: 10px;
-    width: 60%;
+    width: 30%;
     border-radius: 10px;
     border: solid 1px #000;
     background-color: #eee;
@@ -1264,16 +1263,10 @@ select {
     .section-sec__filtro {
         max-width: 100%;
         margin: 1% auto;
-        flex-direction: row;
-        justify-content: space-evenly;
     }
 
     .section-sec__filtro-div-boton {
         display: flex;
-    }
-
-    .section-sec__filtro-boton {
-        width: 100%;
     }
 }
 
@@ -1467,6 +1460,12 @@ select {
 
     .section-sec__filtro-padre {
         display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .section-sec__filtro-boton {
+        width: 20%;
     }
 
     /*-----------Footer---------------*/
@@ -1514,5 +1513,11 @@ select {
 
     .boton-enviar-producto {
         margin: 5% 0 5% 40%;
+    }
+
+    /*-----------Productos - Filtro---------------*/
+
+    .section-sec__filtro {
+        max-width: 50%;
     }
 }

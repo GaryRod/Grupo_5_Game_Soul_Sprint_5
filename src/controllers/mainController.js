@@ -10,6 +10,9 @@ const mainController = {
         let visitados = productModel.buscado('visited');
         res.render('./index', {masVistos, visitados, recomendados})
     },
+    support: (req, res) => {
+        res.render('./support')
+    }
 }
 
 module.exports = mainController
