@@ -61,6 +61,10 @@ const productController = {
 		productModel.delete(req.params.id)
 		res.redirect('/')	
 	},
+	favoritos: (req,res)=>{
+		let producto = productModel.all();
+		res.render('./products/favoritos', {favoritos: producto})
+	}
 }
 
 module.exports = productController
