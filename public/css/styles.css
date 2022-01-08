@@ -1119,7 +1119,7 @@ select {
 }
 
 .support-div-principal-boton:hover {
-    background-color: rgba(60, 63, 112, 0.8);
+    background-color: #334257;
     color: #FFF;
 }
 
@@ -1131,6 +1131,7 @@ select {
     width: 100%;
     padding: 2% 0;
     text-align: center;
+    outline: 0;
 }
 
 /*-----------Footer---------------*/
