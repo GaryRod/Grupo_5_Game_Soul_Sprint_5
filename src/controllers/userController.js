@@ -7,6 +7,9 @@ const userController ={
     login: (req, res) => {
         res.render('./users/login', { title: "Login" })
     },
+    editUser: (req, res) => {
+        res.render('./users/editUser', { title: "Editar Usuario" })
+    }
 }
 
 module.exports = userController
