@@ -1252,6 +1252,12 @@ select {
     font-size: 12px;
 }
 
+/*-----------Mensaje de error---------------*/
+
+.message-error {
+    color: #da1313;
+}
+
 /*-----------Media queries---------------*/
 @media (min-width: 480px ) {
 /*-----------Header---------------*/

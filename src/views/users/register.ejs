@@ -26,17 +26,26 @@
 
                     <div class="contenedor-nombreRegistro">
                         <label class="nombre-registro">Nombre:</label>
-                        <input type="text" name="nombre" class="input-nombre" required>
+                        <input type="text" name="nombre" class="input-nombre" value="<%= locals.old && old.nombre %>" required>
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="message-error"><%= errors.name %></p>
+                        <% } %>
                     </div>
 
                     <div class="contenedor-emailRegistro">
                         <label class="email-registro">E-mail:</label>
-                        <input type="email" name="email" class="input-email" required>
+                        <input type="email" name="email" class="input-email" value="<%= locals.old && old.email %>" required>
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="message-error"><%= errors.name %></p>
+                        <% } %>
                     </div>
 
                     <div class="contenedor-contraseña">
                         <label class="contraseña-registro">Contraseña:</label>
-                        <input type="password" name="contraseña" class="input-contraseña" required>
+                        <input type="password" name="contraseña" class="input-contraseña" value="<%= locals.old && old.contraseña %>" required>
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="message-error"><%= errors.name %></p>
+                        <% } %>
                     </div>
 
                     <div class="contenedor-fechaDeNacimiento">
