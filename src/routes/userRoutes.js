@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer')
 const userController = require('../controllers/userController');
-const usuariosSubida = require('../middlewares/multerMiddleware');
+const userIconsUpload = require('../middlewares/userMulterMiddleware');
 const validacionesMiddleware = require('../middlewares/validatorMiddleware');
 
 router.get('/login', userController.login)
@@ -10,6 +11,8 @@ router.get('/register', userController.register)
 
 router.get('/editUser', userController.editUser);
 
-router.post('/register', validacionesMiddleware, userController.registerProcess);
+router.post('/register', userIconsUpload.single('avatar') ,validacionesMiddleware, userController.registerProcess);
+
+router.post('/login', userController.loginProcess)
 
 module.exports = router

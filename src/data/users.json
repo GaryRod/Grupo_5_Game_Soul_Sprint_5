@@ -1,18 +1,44 @@
-[{
-    "id": 1,
-    "nombre": "Usuario",
-    "apellido": "Administrador",
-    "email": "admin@gamesoul.com",
-    "contraseña": "admin12345",
-    "categoria": "administrador",
-    "imagen": ".../images/iconos/usuario-128px.png"
-},
-{
-    "id": 2,
-    "nombre": "Usuario",
-    "apellido": "Normal",
-    "email": "usuario@gamesoul.com",
-    "contraseña": "usuario12345",
-    "categoria": "usuario",
-    "imagen": ".../images/iconos/usuario-128px.png"
-}]
+[
+ {
+  "id": 1,
+  "nombre": "Usuario",
+  "apellido": "Administrador",
+  "email": "admin@gamesoul.com",
+  "contraseña": "admin12345",
+  "categoria": "administrador",
+  "imagen": ".../images/iconos/usuario-128px.png"
+ },
+ {
+  "id": 2,
+  "nombre": "Usuario",
+  "apellido": "Normal",
+  "email": "usuario@gamesoul.com",
+  "contraseña": "usuario12345",
+  "categoria": "usuario",
+  "imagen": ".../images/iconos/usuario-128px.png"
+ },
+ {
+  "nombre": "martin",
+  "email": "martin@gmail.com",
+  "contraseña": "$2a$10$eN/rwv9gyPRTNzEGrT1Uqe67MOgfeJOLGTPYD8EYwMmQ3GFu1Nffq",
+  "fechaNacimiento": "2022-01-13",
+  "avatar": "avatar-1642016128263.jpg",
+  "id": 3
+ },
+ {
+  "nombre": "pedro",
+  "email": "pedro@gmail.com",
+  "contraseña": "$2a$10$l2YoGARO8fvu.cegcrwfB.GrbsxnjZAGTzquKjDh7rDFHLzn0mXDy",
+  "fechaNacimiento": "2022-01-25",
+  "avatar": "avatar-1642016925219.jpg",
+  "id": 4
+ },
+ {
+  "nombre": "qwqwq",
+  "email": "qwqw@hotmail.com",
+  "contraseña": "$2a$10$o7MfsdiOwdJ9S2fVS6SaHeZoOK.Lm05hsHphoKxy6Dy5BWcTIHYEi",
+  "fechaNacimiento": "2022-01-26",
+  "avatar": "avatar-1642020437171.jpg",
+  "id": 5
+ }
+]

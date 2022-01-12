@@ -1,5 +1,7 @@
-const usersDB = require("../data/users.json");
 const {validationResult} = require('express-validator');
+const bcryptjs = require('bcryptjs')
+const jsonDB = require('../model/jsonDatabase');
+const usersModel = jsonDB('users');
 
 const userController ={
     register: (req, res) => {
@@ -14,14 +16,41 @@ const userController ={
     registerProcess: (req, res) => {
         /* Insertar lógica para el POST acá */
 
-        let errores = validationResult(req);
-
-        if (errores.isEmpty()) {
-            /* res.send provisorio */
-            res.send(req.body)
-        } else {
-            res.render('./users/register', {errors: errores.mapped(), old: req.body})
+        const errores = validationResult(req);
+        
+        if (errores.errors.length > 0 ) {
+        
+            return res.render('./users/register',{
+                errors: errores.mapped(),
+                oldData: req.body
+            })
         }
+       
+        let userToCreate = {
+            ...req.body,
+            contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
+            avatar: req.file.filename
+        }
+
+        usersModel.create(userToCreate)
+
+        res.redirect('./login')
+        
+    },
+    loginProcess: (req,res)=>{
+        let userLogin = usersModel.findField('email', req.body.email)
+        if(userLogin){
+            let okContraseña = bcryptjs.compareSync(req.body.contraseña, userLogin.contraseña)
+            if(okContraseña){
+               return  res.redirect('/')
+            }
+            return res.render('./users/login',{
+                errors: { email: { msg: 'Contraseña incorrecta'}}
+        })
+        }
+        return res.render('./users/login',{
+            errors: { email: { msg: 'Email no registrado'}}
+        })
     }
 }
 
