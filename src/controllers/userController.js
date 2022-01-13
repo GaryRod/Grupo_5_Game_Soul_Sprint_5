@@ -26,15 +26,17 @@ const userController ={
             })
         }
        
+        let usuario = req.body;
+        usuario.imagen = req.file.filename;
         let userToCreate = {
             ...req.body,
             contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-            avatar: req.file.filename
+            avatar: usuario.imagen
         }
 
         usersModel.create(userToCreate)
 
-        res.redirect('./login')
+        res.redirect('./users/login')
         
     },
     loginProcess: (req,res)=>{
