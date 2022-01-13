@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include ('../partials/head', { title: "Editar Usuario" }) %>
+
+<body class="body">
+
+    <%- include('../partials/header', { title: "Editar Usuario" })  %>
+
+    <main class="main--editUser animate__animated animate__fadeInDown">
+        <div class="main--editUser-h1">
+            <h3>¿Qué deseas editar de tu Usuario?</h3>
+        </div>
+
+        <div class="main--editUser-principal">
+            <form action="#" method="post" class="main--editUser-form">
+
+                <div class="editUser-principal-div">
+                    <label for="editUser-nombre">Nombre de usuario:</label><input class="editUser-principal-input" id="editUser-nombre" type="text" placeholder="Tu nombre de usuario...">
+                </div>
+                
+                <div class="editUser-principal-div">
+                    <label for="editUser-email">Email:</label><input class="editUser-principal-input" id="editUser-email" type="email" placeholder="Tu email...">
+                </div>
+                
+                <div class="editUser-principal-div">
+                    <label for="editUser-contra">Contraseña:</label><input class="editUser-principal-input" id="editUser-contra" type="password" placeholder="Tu contraseña...">
+                </div>
+
+                <div class="editUser-principal-div">
+                    <label for="editUser-foto" class=>Tu Foto de Perfil:</label><input class="editUser-principal-input" id="editUser-foto" type="file" accept=".png, .jpg">
+                </div>
+                
+            </form>
+
+            <form action="#" method="post" class="editUser-divboton">
+                <button class="editUser-boton">Editar</button>
+            </form>
+        </div>
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include ('../partials/head') %> 
+<%- include('../partials/head', { title: "Registro" }) %> 
 
 <body class="body">
     <main class="main--registro-login animate__animated animate__fadeInDown">
-        <form action="#" method="post" class="form-contenedor">
+        <form action="#" method="post" class="form-contenedor"  enctype="multipart/form-data">
             <div class="logo">
                 <a href="/"><img src="/images/logo/Game-Soul.png" class="logo-img"></a>
             </div>
@@ -26,31 +26,46 @@
 
                     <div class="contenedor-nombreRegistro">
                         <label class="nombre-registro">Nombre:</label>
-                        <input type="text" name="nombre" class="input-nombre" required>
+                        <input type="text" name="nombre" class="input-nombre" value="<%= locals.oldData ? oldData.nombre : null %>" >
+                        <% if (locals.errors && errors.nombre) { %>
+                            <p class="message-error"><%= errors.nombre.msg %></p>
+                        <% } %>
                     </div>
 
                     <div class="contenedor-emailRegistro">
                         <label class="email-registro">E-mail:</label>
-                        <input type="email" name="email" class="input-email" required>
+                        <input type="email" name="email" class="input-email" value="<%= locals.oldData ? oldData.email : null %>" >
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="message-error"><%= errors.email.msg %></p>
+                        <% } %>
                     </div>
 
                     <div class="contenedor-contraseña">
                         <label class="contraseña-registro">Contraseña:</label>
-                        <input type="password" name="contraseña" class="input-contraseña" required>
+                        <input type="password" name="contraseña" class="input-contraseña" value="<%= locals.oldData ? oldData.contraseña : null %>"  >
+                        <% if (locals.errors && errors.contraseña) { %>
+                            <p class="message-error"><%= errors.contraseña.msg %></p>
+                        <% } %>
                     </div>
 
                     <div class="contenedor-fechaDeNacimiento">
                         <label class="fechaDeNacimiento-registro">Fecha de nacimiento:</label>
-                        <input type="date" name="fechaNacimiento" class="input-fechaNacimiento" required>
+                        <input type="date" name="fechaNacimiento" class="input-fechaNacimiento" >
                     </div>  
-
+                    <div>
+                        <label class="contenedor-avatar">Imagen de Perfil</label>
+                        <input type="file" name="avatar" accept=".png, .jpg" >
+                        <% if (locals.errors && errors.avatar) { %>
+                            <p class="message-error"><%= errors.avatar.msg %></p>
+                        <% } %>
+                    </div>
                     <div class="contenedor-tyc">
                         <label for="tyc">Términos y condiciones</label>
-                        <input type="checkbox" id="tyc" name="checkbox" class="input-checkbox" required>
+                        <input type="checkbox" id="tyc" class="input-checkbox" >
                     </div> 
 
                     <div class="contenedor-botonCrear">        
-                        <button type="submit" name="crearCuenta" class="button-crearCuenta">Crear Cuenta</button>
+                        <button type="submit"  class="button-crearCuenta">Crear Cuenta</button>
                     </div>    
             </section> 
         </form>

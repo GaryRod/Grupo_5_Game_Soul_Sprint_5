@@ -84,6 +84,11 @@ const modelController = function (name) {
             let products = this.all()
             let filtrado = products.filter(i => i.categoria === filtro)
             return filtrado
+        },
+        findField: function(field, text){
+            let allUsers= this.all()
+            let userFound= allUsers.find(oneUser => oneUser[field] === text)
+            return userFound;
         }
     }
 }

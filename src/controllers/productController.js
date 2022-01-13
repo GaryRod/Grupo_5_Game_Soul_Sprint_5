@@ -1,8 +1,6 @@
 const jsonDB = require('../model/jsonDatabase');
 const productModel = jsonDB('products');
 
-const products = require('../data/products')
-
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
@@ -55,7 +53,6 @@ const productController = {
         }
 		productModel.update(objetoAct)
 		res.redirect('/')
-			
 	},
     destroy: (req, res) => {
 		productModel.delete(req.params.id)

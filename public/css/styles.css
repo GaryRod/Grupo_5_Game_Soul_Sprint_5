@@ -1123,8 +1123,16 @@ select {
 }
 
 .support-div-principal-boton:hover {
-    background-color: rgba(60, 63, 112, 0.8);
+    background-color: #334257;
     color: #FFF;
+}
+
+.logito-flecha {
+    transition: transform .5s;
+}
+
+.logito-flecha:hover {
+    transform: rotate(90deg);
 }
 
 .support-div-principal-a {
@@ -1135,6 +1143,52 @@ select {
     width: 100%;
     padding: 2% 0;
     text-align: center;
+    outline: 0;
+}
+
+/*-----------Editar Usuario---------------*/
+
+.main--editUser {
+    margin-top: 0;
+}
+
+.main--editUser-principal {
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    margin: 0 .5%;
+    max-width: 90%;
+}
+
+.editUser-principal-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3% 0%;
+}
+
+.editUser-principal-input {
+    width: 50%;
+}
+
+.editUser-divboton {
+    text-align: center;
+}
+
+.editUser-boton{
+    margin: 3%;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    border: solid 1px #000;
+    background-color: #eee;
+    transition: all .5s;
+    cursor: pointer
+}
+
+.editUser-boton:hover{
+    background-color: #476072;
+    color: white;
 }
 
 /*-----------Footer---------------*/
@@ -1200,6 +1254,12 @@ select {
 
 .footer__copy{
     font-size: 12px;
+}
+
+/*-----------Mensaje de error---------------*/
+
+.message-error {
+    color: #da1313;
 }
 
 /*-----------Media queries---------------*/
@@ -1312,6 +1372,20 @@ select {
     .section-sec__filtro-div-boton {
         display: flex;
     }
+}
+
+/* Editar Usuario */
+
+.main--editUser {
+    margin-top: 30%;
+}
+
+.main--editUser-h1 {
+    text-align: center;
+}
+
+.main--editUser-principal {
+    margin: 4.5%;
 }
 
 @media (min-width: 769px) {
@@ -1523,6 +1597,12 @@ select {
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+/* Editar Usuario */
+
+.main--editUser {
+    margin-top: 15%;
 }
 
 @media (min-width: 1280px) {
