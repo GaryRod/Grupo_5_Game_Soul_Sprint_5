@@ -41,5 +41,29 @@
   "fechaNacimiento": "2022-01-15",
   "avatar": "avatar-1642114140461.jpg",
   "id": 5
+ },
+ {
+  "nombre": "Julian",
+  "email": "julian@gmail.com",
+  "contraseña": "$2a$10$s14psqGw9IDA/1oTjUYb6euoN3ucdYNPEO9WaPRGCYHmDcg1flqJK",
+  "fechaNacimiento": "2022-01-09",
+  "avatar": "avatar-1642116724159.jpg",
+  "id": 6
+ },
+ {
+  "nombre": "ariel",
+  "email": "ariel@gmail.com",
+  "contraseña": "$2a$10$OgV3I.kke8ORm8dV47NVdeRZ7jBRVTLWF8h/mHoIijX/F3g20rAZa",
+  "fechaNacimiento": "2022-01-26",
+  "avatar": "avatar-1642116956668.jpg",
+  "id": 7
+ },
+ {
+  "nombre": "Jony",
+  "email": "jony@gmail.com",
+  "contraseña": "$2a$10$d8babJ0RXuQb34oeKT74hO4K1oL9M7OChSuvv3aqc1R5nR5aBzAem",
+  "fechaNacimiento": "2022-01-25",
+  "avatar": "avatar-1642117171257.jpg",
+  "id": 8
  }
 ]

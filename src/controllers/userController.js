@@ -20,7 +20,7 @@ const userController ={
         
         if (errores.errors.length > 0 ) {
         
-            return res.render('./users/register',{
+            return res.render('./register',{
                 errors: errores.mapped(),
                 oldData: req.body
             })
@@ -34,7 +34,7 @@ const userController ={
 
         usersModel.create(userToCreate)
 
-        res.redirect('./login')
+        res.redirect('/')
         
     },
     loginProcess: (req,res)=>{
