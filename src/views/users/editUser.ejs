@@ -5,7 +5,7 @@
 
 <body class="body">
 
-    <%- include('../partials/header')  %>
+    <%- include('../partials/header', { title: "Editar Usuario" })  %>
 
     <main class="main--editUser animate__animated animate__fadeInDown">
         <div class="main--editUser-h1">
@@ -27,7 +27,6 @@
                     <label for="editUser-contra">Contraseña:</label><input class="editUser-principal-input" id="editUser-contra" type="password" placeholder="Tu contraseña...">
                 </div>
 
-               
                 <div class="editUser-principal-div">
                     <label for="editUser-foto" class=>Tu Foto de Perfil:</label><input class="editUser-principal-input" id="editUser-foto" type="file" accept=".png, .jpg">
                 </div>
