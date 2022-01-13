@@ -5,13 +5,13 @@ const usersModel = jsonDB('users');
 
 const userController ={
     register: (req, res) => {
-        res.render('./users/register', { title: "Registro" })
+        res.render('./users/register')
     },
     login: (req, res) => {
-        res.render('./users/login', { title: "Login" })
+        res.render('./users/login')
     },
     editUser: (req, res) => {
-        res.render('./users/editUser', { title: "Editar Usuario" })
+        res.render('./users/editUser')
     },
     registerProcess: (req, res) => {
         /* Insertar lógica para el POST acá */
