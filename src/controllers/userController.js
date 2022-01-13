@@ -5,13 +5,13 @@ const usersModel = jsonDB('users');
 
 const userController ={
     register: (req, res) => {
-        res.render('./users/register', { title: "Registro" })
+        res.render('./users/register')
     },
     login: (req, res) => {
-        res.render('./users/login', { title: "Login" })
+        res.render('./users/login')
     },
     editUser: (req, res) => {
-        res.render('./users/editUser', { title: "Editar Usuario" })
+        res.render('./users/editUser')
     },
     registerProcess: (req, res) => {
         /* Insertar lógica para el POST acá */
@@ -26,15 +26,17 @@ const userController ={
             })
         }
        
+        let usuario = req.body;
+        usuario.imagen = req.file.filename;
         let userToCreate = {
             ...req.body,
             contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-            avatar: req.file.filename
+            avatar: usuario.imagen
         }
 
         usersModel.create(userToCreate)
 
-        res.redirect('./login')
+        res.redirect('./users/login')
         
     },
     loginProcess: (req,res)=>{
