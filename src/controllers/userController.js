@@ -44,7 +44,7 @@ const userController ={
         if(userLogin){
             let okContraseña = bcryptjs.compareSync(req.body.contraseña, userLogin.contraseña)
             if(okContraseña){
-               return  res.redirect('/')
+                return  res.redirect('/')
             }
             return res.render('./users/login',{
                 errors: { email: { msg: 'Contraseña incorrecta'}}
