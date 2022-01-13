@@ -18,27 +18,28 @@
   "imagen": ".../images/iconos/usuario-128px.png"
  },
  {
-  "nombre": "martin",
-  "email": "martin@gmail.com",
-  "contraseña": "$2a$10$eN/rwv9gyPRTNzEGrT1Uqe67MOgfeJOLGTPYD8EYwMmQ3GFu1Nffq",
-  "fechaNacimiento": "2022-01-13",
-  "avatar": "avatar-1642016128263.jpg",
+  "nombre": "rewrweweqwqew",
+  "email": "qewwqeqweqw@gmail.com",
+  "contraseña": "$2a$10$76WYZvXVnkVXMHYfbnMoY.7wJGtgZXY4b8ylWhmUt6lIZohThw7uq",
+  "fechaNacimiento": "2022-01-22",
+  "avatar": "avatar-1642113344989.jpg",
   "id": 3
  },
  {
-  "nombre": "pedro",
-  "email": "pedro@gmail.com",
-  "contraseña": "$2a$10$l2YoGARO8fvu.cegcrwfB.GrbsxnjZAGTzquKjDh7rDFHLzn0mXDy",
-  "fechaNacimiento": "2022-01-25",
-  "avatar": "avatar-1642016925219.jpg",
+  "nombre": "qweqqeqweqweqw",
+  "email": "dsa56sda4565ad4ds@gmail.com",
+  "contraseña": "$2a$10$5I/sEvjUJwgOhU.X/LeDGeJobLhZBlpnRWtrAjLUf023OpqbVP6ay",
+  "fechaNacimiento": "2022-01-08",
+  "imagen": "avatar-1642114079204.jpg",
+  "avatar": "avatar-1642114079204.jpg",
   "id": 4
  },
  {
-  "nombre": "qwqwq",
-  "email": "qwqw@hotmail.com",
-  "contraseña": "$2a$10$o7MfsdiOwdJ9S2fVS6SaHeZoOK.Lm05hsHphoKxy6Dy5BWcTIHYEi",
-  "fechaNacimiento": "2022-01-26",
-  "avatar": "avatar-1642020437171.jpg",
+  "nombre": "wqeqwwqe34weq45",
+  "email": "wq65eq65@gmail.com",
+  "contraseña": "$2a$10$eeA4dnXBjYPQo3M2QierE.DsoLJ0yHqVnzYOWyVp2Pb9oq6z8EXyi",
+  "fechaNacimiento": "2022-01-15",
+  "avatar": "avatar-1642114140461.jpg",
   "id": 5
  }
 ]

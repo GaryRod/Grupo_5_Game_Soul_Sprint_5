@@ -1,5 +1,5 @@
 const {body} = require('express-validator');
-const { path } = require('express/lib/application');
+const path = require('path')
 const validaciones = [
     body('nombre')
         .notEmpty().withMessage("Debes completar con un nombre"),
