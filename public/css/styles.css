@@ -1032,6 +1032,10 @@ select {
     color: yellow;
 }
 
+.contenido{
+    width: 100%;
+}
+
 .cont-datos{
     display: flex;
     width: 100%;
