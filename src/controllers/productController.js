@@ -53,7 +53,6 @@ const productController = {
         }
 		productModel.update(objetoAct)
 		res.redirect('/')
-			
 	},
     destroy: (req, res) => {
 		productModel.delete(req.params.id)
