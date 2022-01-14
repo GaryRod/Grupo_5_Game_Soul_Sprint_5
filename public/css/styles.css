@@ -568,6 +568,10 @@
 }
 
 /*-----------Crear producto---------------*/
+.main--createProduct {
+    margin-top: 25%;
+}
+
 .formCreateProduct {
     background-color: #eee;
     border-radius: 50px;
@@ -1311,7 +1315,7 @@ select {
 
     /*-----------Crear producto---------------*/
     .boton-enviar-producto {
-        margin: 5% 0 5% 20%;
+        margin: 5% 0 5% 30%;
     }
 
     /*-----------Login y registro---------------*/
@@ -1374,19 +1378,19 @@ select {
     }
 }
 
-/* Editar Usuario */
+    /* Editar Usuario */
 
-.main--editUser {
-    margin-top: 30%;
-}
+    .main--editUser {
+        margin-top: 30%;
+    }
 
-.main--editUser-h1 {
-    text-align: center;
-}
+    .main--editUser-h1 {
+        text-align: center;
+    }
 
-.main--editUser-principal {
-    margin: 4.5%;
-}
+    .main--editUser-principal {
+        margin: 4.5%;
+    }
 
 @media (min-width: 769px) {
     /*-----------Header---------------*/
@@ -1633,16 +1637,15 @@ select {
 
     /*-----------Crear producto---------------*/
     .main--createProduct {
-        margin-top: 10%;
+        margin-top: 8%;
     }
 
     .formCreateProduct {
-        max-width: 50%;
-        margin: 0 0 0 25%;
+        max-width: 100%;
     }
 
     .boton-enviar-producto {
-        margin: 5% 0 5% 40%;
+        margin: 5% 30%;
     }
 
     /*-----------Productos - Filtro---------------*/

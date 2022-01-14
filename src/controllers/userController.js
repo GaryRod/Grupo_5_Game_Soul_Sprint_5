@@ -38,19 +38,22 @@ const userController ={
         
     },
     loginProcess: (req,res)=>{
-        let userLogin = usersModel.findField('email', req.body.email)
-        if(userLogin){
-            let okContraseña = bcryptjs.compareSync(req.body.contraseña, userLogin.contraseña)
-            if(okContraseña){
-                return  res.redirect('/')
-            }
-            return res.render('./users/login',{
-                errors: { email: { msg: 'Contraseña incorrecta'}}
-        })
+        let users = usersModel.all();
+        let logged = users.find(user => user.email === req.body.email);
+
+        if(logged){
+            let okContraseña = bcryptjs.compareSync(req.body.contraseña, logged.contraseña)
+            if(!okContraseña) {
+                return res.render('./users/login', {
+                    errors: !okContraseña ? { email: { msg: 'Contraseña incorrecta'}} : null
+            })
         }
-        return res.render('./users/login',{
-            errors: { email: { msg: 'Email no registrado'}}
-        })
+            return res.redirect('/')
+        } else {
+            return res.render('./users/login',{
+                errors: { email: { msg: 'Email no registrado'}}
+            })
+        }
     }
 }
 

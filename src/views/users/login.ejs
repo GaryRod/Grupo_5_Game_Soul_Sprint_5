@@ -35,6 +35,11 @@
                         <% } %>
                         <label for="password">Contraseña:</label>
                         <input type="password" id="password" class="form__input-login" name="contrasenia-login">
+                        <% if (locals.errors && errors.contrasenia-login) { %>
+                            <p class="message-error">
+                                <%= errors.contrasenia-login.msg %>
+                            </p>
+                        <% } %>
                     </div>
                 </div>
     
