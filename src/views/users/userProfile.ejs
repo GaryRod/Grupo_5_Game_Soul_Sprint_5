@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include ('../partials/head', { title: "Perfil de Usuario" }) %>
+
+<body class="body">
+
+    <%- include('../partials/header')  %> 
+
+    <main class="main--userProfile">
+        <h1 class="main--userProfile-h1">Bienvenido Usuario!</h1>
+
+        <div class="main--userProfile-div">
+            <img src="../images/iconosUsuarios/default.png" class="fotoPerfil" alt="Foto de Perfil">
+        </div>
+
+        <div class="main--userProfile-h2-div">
+            <h2 class="main--userProfile-h2">Deseas cambiar alguna información?</h2>
+        </div>
+
+        <div class="main--userProfile-h3-div">
+            <h3 class><a href="./editUser" class="main--userProfile-a">Edita tu perfil</a></h3>
+        </div>
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+</html>
