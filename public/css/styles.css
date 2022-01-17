@@ -1195,6 +1195,39 @@ select {
     color: white;
 }
 
+/*-----------Perfil de Usuario---------------*/
+
+.main--userProfile {
+    margin-top: 5%;
+}
+
+.main--userProfile-h1 {
+    text-align: center;
+}
+
+.main--userProfile-div {
+    text-align: center;
+}
+
+.fotoPerfil {
+    width: 50%;
+    border-radius: 35px;
+}
+
+.main--userProfile-h2 {
+    text-align: center;
+}
+
+.main--userProfile-h3-div {
+    text-align: center;
+    margin: 2%;
+}
+
+.main--userProfile-a {
+    text-decoration: none;
+    color: rgb(14, 52, 110);    
+}
+
 /*-----------Footer---------------*/
 .footer{
     align-self: flex-end;
@@ -1392,6 +1425,11 @@ select {
         margin: 4.5%;
     }
 
+    /* Perfil de Usuario */
+
+    .main--userProfile {
+        margin-top: 15%;
+    }
 @media (min-width: 769px) {
     /*-----------Header---------------*/
     .header__primer-fila{
@@ -1603,12 +1641,18 @@ select {
     }
 }
 
-/* Editar Usuario */
+    /* Editar Usuario */
 
-.main--editUser {
-    margin-top: 15%;
-}
+    .main--editUser {
+        margin-top: 15%;
+    }
 
+
+    /* Perfil de Usuario */ 
+
+    .main--userProfile {
+        margin-top: 10%;
+    }
 @media (min-width: 1280px) {
 
     /*-----------Inicio login---------------*/
@@ -1658,5 +1702,11 @@ select {
 
     .main--support {
         margin-top: 9%; 
+    }
+
+    /* Perfil de Usuario */ 
+
+    .main--userProfile {
+        margin-top: 7%;
     }
 }

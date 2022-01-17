@@ -7,6 +7,8 @@ const validacionesMiddleware = require('../middlewares/validatorMiddleware');
 
 router.get('/login', userController.login)
 
+router.get('/userProfile', userController.profile);
+
 router.get('/register', userController.register)
 
 router.get('/editUser', userController.editUser);

@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const path = require('path')
+const path = require('path');
+const session = require('express-session');
 
 const mainRoutes = require('./routes/mainRoutes')
 const productsRoutes = require('./routes/productsRoutes')
@@ -24,6 +25,14 @@ app.use(express.json())
 app.use('/', mainRoutes)
 app.use('/products', productsRoutes)
 app.use('/users', userRoutes)
+
+// Sessiones y Cookies
+
+app.use(session({
+    secret: "No deberías estar leyendo esto!",
+    resave: false,
+    saveUninitialized: false
+}));
 
 // Error 404
 app.use((req, res, next)=>{
