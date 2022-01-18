@@ -1,6 +1,7 @@
 const {validationResult} = require('express-validator');
 const bcryptjs = require('bcryptjs')
 const jsonDB = require('../model/jsonDatabase');
+const req = require('express/lib/request');
 const usersModel = jsonDB('users');
 
 const userController ={
@@ -20,7 +21,7 @@ const userController ={
         
         if (errores.errors.length > 0 ) {
         
-            return res.render('./register',{
+            return res.render('./users/register',{
                 errors: errores.mapped(),
                 oldData: req.body
             })
@@ -38,32 +39,40 @@ const userController ={
         
     },
     loginProcess: (req,res)=>{
-        let usuarioLogin = usersModel.findField('email', req.body.email);
+        let userToLogin = usersModel.findField ('email',req.body.email)
 
-        if (usuarioLogin) {
-            let contraseniaOk = bcryptjs.compareSync(req.body.contrasenia-login, usuarioLogin.contraseña)
-            if (contraseniaOk) {
-                delete usuarioLogin.contraseña;
-                req.session.usuarioLogeado = usuarioLogin;
-                res.redirect('/');
-            }
-
-            return res.render('./users/login', {
-                errors: {
-                    email: 'La contraseña es incorrecta!'
-                }
+        /*if(logged){
+            let okContraseña = bcryptjs.compareSync(req.body.contraseña, logged.contraseña)
+            if(!okContraseña) {
+                return res.render('./users/login', {
+                    errors: !okContraseña ? { email: { msg: 'Contraseña incorrecta'}} : null
             })
         }
-
-        return res.render('./users/login', {
-            errors: {
-                email: 'Este email no está registrado!'
+            return res.redirect('/')
+        } else {
+            return res.render('./users/login',{
+                errors: { email: { msg: 'Email no registrado'}}
+            })
+        }*/
+        if(userToLogin){
+            let isOkThePasword = bcryptjs.compareSync(req.body.contraseña,userToLogin.contraseña)
+            if(isOkThePasword){
+                return res.redirect('./userProfile')
             }
+            
+        }
+        return res.render('./users/login',{
+            errors: { 
+                email: { msg: 'Las credenciales no son validas'},
+                
+            },
+            oldData: req.body 
         })
     },
-    profile: (req, res) => {
-        return res.render('./users/userProfile')
+    profile : (req,res)=>{
+        res.render('users/userProfile')
     }
+    
 }
 
 module.exports = userController

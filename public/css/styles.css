@@ -828,7 +828,9 @@ select {
 .contenedor-fechaDeNacimiento{
     margin-bottom: 10px;
 }
-
+.text-danger{
+    color :rgb(200, 0, 0)
+}
 /*-----------ProductDetail---------------*/
 .main-detail{
     display: flex;

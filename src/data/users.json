@@ -65,5 +65,13 @@
   "fechaNacimiento": "2022-01-25",
   "avatar": "avatar-1642117171257.jpg",
   "id": 8
+ },
+ {
+  "nombre": "Jhonatan",
+  "email": "jonny@gmail.com",
+  "contraseña": "$2a$10$tGKEBVsVejxWOTb.L777iO.kEgYmG/PQLwQKPp9/hUi7BEj3gBK9q",
+  "fechaNacimiento": "2022-01-17",
+  "avatar": "avatar-1642468824082.jpg",
+  "id": 9
  }
 ]

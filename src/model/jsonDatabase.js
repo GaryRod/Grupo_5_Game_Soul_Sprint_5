@@ -15,6 +15,7 @@ const modelController = function (name) {
             let tableContents = fs.readFileSync(this.tablePath, 'utf-8');
             return JSON.parse(tableContents) || [];
         },
+        
         // Grabo el array que recibo por parámetro y lo paso a formato Json
         writeFile: function (contents) {
             let tableContents = JSON.stringify(contents, null, ' ');
@@ -86,10 +87,11 @@ const modelController = function (name) {
             return filtrado
         },
         findField: function(field, text){
-            let allUsers= this.all()
+            let allUsers= this.all();
             let userFound= allUsers.find(oneUser => oneUser[field] === text)
             return userFound;
         }
+        
     }
 }
 
