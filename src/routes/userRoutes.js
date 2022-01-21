@@ -15,7 +15,7 @@ router.get('/register', guestMiddleware, userController.register)
 
 router.post('/register', userIconsUpload.single('avatar') ,validacionesMiddleware, userController.registerProcess);
 
-router.get('/userProfile', authMiddleware , userController.profile);
+router.get('/userProfile', authMiddleware, userController.profile);
 
 router.get('/editUser', userController.editUser);
 

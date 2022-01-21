@@ -49,7 +49,6 @@ const userController ={
         usersModel.create(userToCreate)
 
         res.redirect('/')
-        
     },
     loginProcess: (req,res)=>{
         let userToLogin = usersModel.findField ('email', req.body.email)

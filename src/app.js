@@ -6,6 +6,7 @@ const session = require('express-session');
 const mainRoutes = require('./routes/mainRoutes')
 const productsRoutes = require('./routes/productsRoutes')
 const userRoutes = require('./routes/userRoutes')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 // Sessiones y Cookies
 app.use(session({
@@ -13,6 +14,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+
+// User logged
+app.use(userLoggedMiddleware)
 
 // Archivos estáticos
 app.use(express.static('public'));
