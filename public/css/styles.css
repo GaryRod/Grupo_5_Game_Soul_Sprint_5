@@ -93,15 +93,34 @@
     position: absolute;
     list-style: none;
     border: solid 1px #334257;
-    display: none;
     border-radius: 5px;
     background-color: #eee;
     transform: translateX(-15px);
     z-index: 900;
+    clip-path: var(--clip);
+    transition: clip-path .3s;
 }
 
-.cont-i__cont-lista-icono:hover .cont-i__lista{
-    display: block;
+.cont-i__lista--logged{
+    transform: translateX(-50px);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cont-i__cont-lista-icono{
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.cont-i__cont-lista-icono:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.cont-i__titulo{
+    color: #334257;
 }
 
 .cont-i__enlaces{
