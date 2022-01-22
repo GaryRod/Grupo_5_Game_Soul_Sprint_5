@@ -12,12 +12,12 @@
             
             <div class="form__seccion-nombre">
                 <h5 class="form__seccion-h5">Nombre del producto:</h5>
-                <input type="text" class="input__create-product" name="nombre" placeholder="Nombre del producto..." required>
+                <input type="text" class="input__create-product" name="nombre" placeholder="Nombre del producto..." value= "<%= productToEdit.nombre %>"  required>
             </div>
             
             <div class="form__seccion-descripcion">
                 <h5 class="form__seccion-h5">Descripción del producto:</h5>
-                <input type="textarea" class="input__create-product" name="descripcion" placeholder="Descripción del producto..." required>
+                <input type="textarea" class="input__create-product" name="descripcion" placeholder="Descripción del producto..." value= "<%= productToEdit.descripcion %>" required>
             </div>
             
             <div class="form__seccion-img">
@@ -47,7 +47,7 @@
             
             <div class="form__seccion-precio">
                 <h5 class="form__seccion-h5">Escribe un precio:</h5>
-                <input type="text" class="input__create-product" name="precio" required>
+                <input type="text" class="input__create-product" name="precio" value= "<%= productToEdit.precio %>" required>
             </div>
 
             <div class="form__seccion-inputCrear">
