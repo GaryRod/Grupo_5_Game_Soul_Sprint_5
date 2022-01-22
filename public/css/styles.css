@@ -1231,8 +1231,8 @@ select {
 }
 
 .fotoPerfil {
-    width: 50%;
-    border-radius: 35px;
+    width: 40%;
+    border-radius: 100px;
 }
 
 .main--userProfile-h2 {
@@ -1450,6 +1450,10 @@ select {
 
     .main--userProfile {
         margin-top: 15%;
+    }
+
+    .fotoPerfil {
+        width: 30%;
     }
 @media (min-width: 769px) {
     /*-----------Header---------------*/
@@ -1673,6 +1677,10 @@ select {
 
     .main--userProfile {
         margin-top: 10%;
+    }
+
+    .fotoPerfil {
+        width: 20%;
     }
 @media (min-width: 1280px) {
 
