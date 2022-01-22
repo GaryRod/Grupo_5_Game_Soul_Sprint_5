@@ -40,23 +40,16 @@ const userController ={
     },
     loginProcess: (req,res)=>{
         let userToLogin = usersModel.findField ('email',req.body.email)
-
-        /*if(logged){
-            let okContraseña = bcryptjs.compareSync(req.body.contraseña, logged.contraseña)
-            if(!okContraseña) {
-                return res.render('./users/login', {
-                    errors: !okContraseña ? { email: { msg: 'Contraseña incorrecta'}} : null
-            })
-        }
-            return res.redirect('/')
-        } else {
-            return res.render('./users/login',{
-                errors: { email: { msg: 'Email no registrado'}}
-            })
-        }*/
+        
         if(userToLogin){
             let isOkThePasword = bcryptjs.compareSync(req.body.contraseña,userToLogin.contraseña)
             if(isOkThePasword){
+                delete userToLogin.contraseña
+                req.session.userLogged = userToLogin
+
+                if(req.body.recordame){
+                    res.cookie('userEmail',req.body.email,{maxAge:(1000*60)})
+                }
                 return res.redirect('./userProfile')
             }
             
@@ -70,6 +63,8 @@ const userController ={
         })
     },
     profile : (req,res)=>{
+        res.clearCookie('userMail')
+        req.session.destroy()
         res.render('users/userProfile')
     }
     

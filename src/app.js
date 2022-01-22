@@ -7,6 +7,11 @@ const mainRoutes = require('./routes/mainRoutes')
 const productsRoutes = require('./routes/productsRoutes')
 const userRoutes = require('./routes/userRoutes')
 
+app.use(session({
+    secret: "No deberías estar leyendo esto!",
+    resave: false,
+    saveUninitialized: false
+}));
 // Archivos estáticos
 app.use(express.static('public'));
 
