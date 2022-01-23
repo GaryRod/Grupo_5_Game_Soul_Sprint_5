@@ -123,6 +123,12 @@
     color: #334257;
 }
 
+.cont-i__img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
 .cont-i__enlaces{
     color: #334257;
     display: block;
@@ -631,7 +637,7 @@ select {
     width: 50%;
 }
 
-/*-----------login y registro---------------*/
+/*-----------Login y registro---------------*/
 /* Contenedor principal */
 .main--registro-login{
     max-width: 450px;
@@ -850,6 +856,7 @@ select {
 .text-danger{
     color :rgb(200, 0, 0)
 }
+
 /*-----------ProductDetail---------------*/
 .main-detail{
     display: flex;
@@ -1093,7 +1100,6 @@ select {
     padding: 20px;
     text-align: start;
     height: 87%;
-    /* overflow: scroll; */
 }
 
 .cont__edicion {
@@ -1111,7 +1117,6 @@ select {
 }
 
 /*-----------Error 404---------------*/
-
 .main--error-404 {
     display: flex;
     flex-direction: column;
@@ -1123,7 +1128,6 @@ select {
 }
 
 /*-----------Soporte---------------*/
-
 .main--support {
     margin-top: 25%;
 }
@@ -1172,7 +1176,6 @@ select {
 }
 
 /*-----------Editar Usuario---------------*/
-
 .main--editUser {
     margin-top: 0;
 }
@@ -1217,7 +1220,6 @@ select {
 }
 
 /*-----------Perfil de Usuario---------------*/
-
 .main--userProfile {
     margin-top: 5%;
 }
@@ -1253,7 +1255,7 @@ select {
 .footer{
     align-self: flex-end;
     width: 100%;
-    padding: 10px;
+    padding: 10px 10%;
     display: flex;
     flex-direction: column;
     background-color: #334257;
@@ -1322,6 +1324,7 @@ select {
 
 /*-----------Media queries---------------*/
 @media (min-width: 480px ) {
+
 /*-----------Header---------------*/
     .cont-i__iconos{
         width: 35px;
@@ -1406,9 +1409,18 @@ select {
     }
 
     /*-----------Error 404---------------*/
-
     .img--error-404 {
         margin-top: 10%;
+    }
+
+    /*-----------Filtro productos---------------*/
+    .section-sec__filtro {
+        max-width: 100%;
+        margin: 1% auto;
+    }
+
+    .section-sec__filtro-div-boton {
+        display: flex;
     }
 
     /*-----------Footer---------------*/
@@ -1419,21 +1431,9 @@ select {
     .footer__li-met-pago{
         width: 40px;
     }
-
-    /* Filtro en Productos */
-
-    .section-sec__filtro {
-        max-width: 100%;
-        margin: 1% auto;
-    }
-
-    .section-sec__filtro-div-boton {
-        display: flex;
-    }
 }
 
-    /* Editar Usuario */
-
+    /*-----------Editar usuario---------------*/
     .main--editUser {
         margin-top: 30%;
     }
@@ -1446,8 +1446,7 @@ select {
         margin: 4.5%;
     }
 
-    /* Perfil de Usuario */
-
+    /*-----------Perfil de usuario---------------*/
     .main--userProfile {
         margin-top: 15%;
     }
@@ -1596,10 +1595,6 @@ select {
         width: 200px;
     }
 
-    /* .input-fechaNacimiento{
-        text-align: center;
-    } */
-
     /*-----------ProductDetail---------------*/
     .main-detail{
         flex-direction: row;
@@ -1642,7 +1637,6 @@ select {
     }
 
     /*-----------Filtro en Productos---------------*/
-
     .section-sec__filtro-padre {
         display: flex;
         justify-content: space-evenly;
@@ -1654,7 +1648,6 @@ select {
     }
 
     /*-----------Support---------------*/
-
     .main--support {
         margin-top: 15%;
     }
@@ -1664,25 +1657,27 @@ select {
         flex-direction: row;
         justify-content: space-between;
     }
-}
-
-    /* Editar Usuario */
-
+    
+    /*-----------Editar usuario---------------*/
     .main--editUser {
         margin-top: 15%;
     }
-
-
-    /* Perfil de Usuario */ 
-
+    
+    /*-----------Perfil de usuario---------------*/
     .main--userProfile {
         margin-top: 10%;
     }
-
+    
     .fotoPerfil {
         width: 20%;
     }
+}
+
 @media (min-width: 1280px) {
+    /*-----------Header---------------*/
+    .header{
+        padding: 0 10%;
+    }
 
     /*-----------Inicio login---------------*/
     .form {
@@ -1722,19 +1717,16 @@ select {
     }
 
     /*-----------Productos - Filtro---------------*/
-
     .section-sec__filtro {
         max-width: 50%;
     }
 
     /*-----------Support---------------*/
-
     .main--support {
         margin-top: 9%; 
     }
 
-    /* Perfil de Usuario */ 
-
+    /*-----------Perfil de usuario---------------*/
     .main--userProfile {
         margin-top: 7%;
     }

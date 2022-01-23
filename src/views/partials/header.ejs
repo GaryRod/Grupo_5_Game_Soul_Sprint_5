@@ -20,7 +20,7 @@
                 <% if (locals.isLogged) { %>
                     <ul class="cont-i__lista cont-i__lista--logged">
                         <span class="cont-i__titulo">Hola <%= locals.userLogged.nombre %>  </span>
-                        <img src="/images/iconosUsuarios/<%= locals.userLogged.avatar %>" alt="">
+                        <img src="/images/iconosUsuarios/<%= locals.userLogged.avatar %>" alt="" class="cont-i__img">
                         <a href="/users/logout" class="cont-i__enlaces">Cerrar sesión</a>
                     </ul>
                 <% } else {%>

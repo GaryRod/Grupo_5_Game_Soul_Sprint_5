@@ -46,7 +46,7 @@ const productController = {
 			nombre : req.body.nombre,
 			descripcion : req.body.descripcion,
 			precio : req.body.precio,
-			edicion : req.body.edicion,      
+			edicion : req.body.edicion,
 			img: grupo.imagen,
 			genero: req.body.genero,
 			categoria : req.body.categoria
