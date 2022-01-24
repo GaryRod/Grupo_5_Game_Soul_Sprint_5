@@ -2,10 +2,24 @@ const express = require("express");
 const app = express();
 const path = require('path');
 const session = require('express-session');
+const cookies = require('cookie-parser')
 
 const mainRoutes = require('./routes/mainRoutes')
 const productsRoutes = require('./routes/productsRoutes')
 const userRoutes = require('./routes/userRoutes')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+
+// Sessiones y Cookies
+app.use(session({
+    secret: "No deberías estar leyendo esto!",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(cookies())
+
+// User logged
+app.use(userLoggedMiddleware)
 
 app.use(session({
     secret: "No deberías estar leyendo esto!",
@@ -21,6 +35,8 @@ app.set("views", path.resolve(__dirname, "./views"))
 
 // Requerimientos para formularios
 const methodOverride =  require('method-override'); 
+const cookieParser = require("cookie-parser");
+const { cookie } = require("express/lib/response");
 app.use(methodOverride('_method'));
 
 app.use(express.urlencoded({ extended: false }));
@@ -30,14 +46,6 @@ app.use(express.json())
 app.use('/', mainRoutes)
 app.use('/products', productsRoutes)
 app.use('/users', userRoutes)
-
-// Sessiones y Cookies
-
-app.use(session({
-    secret: "No deberías estar leyendo esto!",
-    resave: false,
-    saveUninitialized: false
-}));
 
 // Error 404
 app.use((req, res, next)=>{

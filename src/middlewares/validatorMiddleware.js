@@ -19,7 +19,7 @@ const validaciones = [
             let fileExtension = path.extname(file.originalname)
             if (!acceptedExtensions.includes(fileExtension)){
             throw new Error ('Las extensiones permitidas son .jpg .png')
-         }
+        }
     
         }
         return true;

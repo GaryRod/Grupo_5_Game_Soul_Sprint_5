@@ -26,7 +26,20 @@ const userController ={
                 oldData: req.body
             })
         }
-       
+
+        let userInDB = usersModel.findField('email', req.body.email)
+
+        if (userInDB) {
+            return res.render('./users/register',{
+                errors: {
+                    email: {
+                        msg: 'Este email ya esta registrado'
+                    }
+                },
+                oldData: req.body
+            })
+        }
+
         let userToCreate = {
             ...req.body,
             contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
@@ -36,38 +49,45 @@ const userController ={
         usersModel.create(userToCreate)
 
         res.redirect('/')
-        
     },
     loginProcess: (req,res)=>{
         let userToLogin = usersModel.findField ('email',req.body.email)
         
         if(userToLogin){
-            let isOkThePasword = bcryptjs.compareSync(req.body.contraseña,userToLogin.contraseña)
+            let isOkThePasword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
             if(isOkThePasword){
                 delete userToLogin.contraseña
                 req.session.userLogged = userToLogin
 
-                if(req.body.recordame){
+                if(req.body.recuerdame){
                     res.cookie('userEmail',req.body.email,{maxAge:(1000*60)})
                 }
+
                 return res.redirect('./userProfile')
             }
-            
+            return res.render('./users/login',{
+                errors: { 
+                    email: { msg: 'Las credenciales no son validas'},
+                },
+                oldData: req.body
+            })
         }
+
         return res.render('./users/login',{
             errors: { 
-                email: { msg: 'Las credenciales no son validas'},
-                
+                email: { msg: 'Por favor, ingresá un email válido'},
             },
-            oldData: req.body 
         })
     },
-    profile : (req,res)=>{
-        res.clearCookie('userMail')
+    profile: (req,res) => {
+        res.render('./users/userProfile', {
+            user: req.session.userLogged
+        })
+    },
+    logout: (req, res) => {
         req.session.destroy()
-        res.render('users/userProfile')
+        return res.redirect('/')
     }
-    
 }
 
 module.exports = userController

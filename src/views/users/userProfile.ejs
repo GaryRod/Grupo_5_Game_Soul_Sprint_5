@@ -8,10 +8,10 @@
     <%- include('../partials/header')  %> 
 
     <main class="main--userProfile">
-        <h1 class="main--userProfile-h1">Bienvenido Usuario!</h1>
+        <h1 class="main--userProfile-h1">Bienvenido <%= user.nombre %></h1>
 
         <div class="main--userProfile-div">
-            <img src="../images/iconosUsuarios/default.png" class="fotoPerfil" alt="Foto de Perfil">
+            <img src="../images/iconosUsuarios/<%= user.avatar %>" class="fotoPerfil" alt="Foto de Perfil">
         </div>
 
         <div class="main--userProfile-h2-div">

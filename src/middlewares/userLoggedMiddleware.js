@@ -1,22 +1,23 @@
 const jsonDB = require('../model/jsonDatabase');
-const userModel = jsonDB('users');
+const usersModel = jsonDB('users');
 
 
-function userLoggedMiiddleware(res,req,next){
-    req.locals.isLogged = false;
+function userLoggedMiddleware(req, res, next) {
+    res.locals.isLogged = false
 
-    let emailsInCookie = res.cookies.userMail
-    let userFromCoike = userModel.findByField('email',emailsInCookie);
+    let emailsInCookie = req.cookies.userEmail
+    let userFromCoike = usersModel.findField('email',emailsInCookie);
 
     if(userFromCoike){
-        res.session.userLogged = userFromCoike
+        req.session.userLogged = userFromCoike
     }
 
-
-    if(res.session.userLogged){
-        req.locals.isLogged = true;
-        req.locals.userLogged = res.session.userLogged
+    if (req.session && req.session.userLogged) {
+        res.locals.isLogged = true
+        res.locals.userLogged = req.session.userLogged
     }
-    next();
+
+    next()
 }
-module.exports=userLoggedMiiddleware
+
+module.exports = userLoggedMiddleware

@@ -73,5 +73,13 @@
   "fechaNacimiento": "2022-01-17",
   "avatar": "avatar-1642468824082.jpg",
   "id": 9
+ },
+ {
+  "nombre": "Gary",
+  "email": "garyrodriguez361@gmail.com",
+  "contraseña": "$2a$10$OouPDgCIRhcB5zfHSIpVYe9Vz3K7f526lqgHe0C5hvXFDB8mM3.Em",
+  "fechaNacimiento": "2022-01-19",
+  "avatar": "avatar-1642624380684.jpg",
+  "id": 10
  }
 ]

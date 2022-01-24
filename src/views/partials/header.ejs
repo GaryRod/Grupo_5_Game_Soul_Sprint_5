@@ -10,13 +10,19 @@
         </form>
 
         <div class="cont-i">
+
             <div class="cont-i__cont-lista-icono">
                 <img src="/images/iconos/user.svg" class="cont-i__iconos con-i__iconos--user">
                 <ul class="cont-i__lista">
-                    <li class="cont-i__items cont-i__items-log"><a href="/users/login" class="cont-i__enlaces">Login</a></li>
-                    <li class="cont-i__items"><a href="/users/register" class="cont-i__enlaces">Register</a></li>
+                    <% if (locals.isLogged) { %>
+                        <a href="/users/logout">Cerrar sesión</a>
+                    <% } else {%>
+                        <li class="cont-i__items cont-i__items-log"><a href="/users/login" class="cont-i__enlaces">Login</a></li>
+                        <li class="cont-i__items"><a href="/users/register" class="cont-i__enlaces">Register</a></li>
+                    
                 </ul>
             </div>
+            <% } %> 
             <a href="/products/productCart"><img src="/images/iconos/shop.svg" class="cont-i__iconos"></a>
             <img src="/images/iconos/burger-menu.svg" class="cont-i__iconos cont-i__iconos--burger-menu">
         </div>
