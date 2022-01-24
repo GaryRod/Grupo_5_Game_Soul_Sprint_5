@@ -1,14 +1,14 @@
 # Grupo_5_Game_Soul
 
-# Retrospectiva
+# Retrospectiva:
 
-Como viene siendo costumbre, usaremos la dinámica de la estrella de mar para poder realizar la retrospectiva:
+Como se está implementando últimamente, usaremos la dinámica de la estrella de mar para poder realizar la retrospectiva:
 
-1. Comenzar a hacer: Usar más el tablero de trabajo, porque no lo hemos usado mucho
-2. Hacer más: Ayudar más entre los compañeros, debido a que cuando nos toca una parte, no nos ayudamos entre nosotros
-3. Continuar haciendo: Repartir mejor las tareas, ya que ha quedado muy disparejo
-4. Hacer menos: No comunicarse, hay que comunicarse mucho más
-5. Dejar de hacer: Que no quede ningún compañero sin realizar una tarea, todos tienen que hacer al menos una parte
+1. Comenzar a hacer :sunglasses:: Usar las Dailys no sólo para avanzar con el proyecto integrador, si no para sacarnos dudas de ejercicios o completar actividades.
+2. Hacer más :thumbsup:: Usar más el tablero, porque si bien (a comparación del sprint pasado) lo he hemos usado más, creemos que se tendría que usar aún más activamente.
+3. Continuar haciendo :muscle:: Dailys, quedamos muy satisfechos con las dailys en este sprint así que tenemos que continuar de esta forma.
+4. Hacer menos :no_good:: Tratar de entregar los sprints antes del día especificado, debido a que siempre está mejor entregarlos con timepo antes de hacer todo a último momento.
+5. Dejar de hacer :no_entry_sign:: No estar tan ausente en las Dailys o demás reuniones, porque pueden contribuir a la negatiidad en el grupo.
 
 # Tablero de trabajo actualizado:
 
