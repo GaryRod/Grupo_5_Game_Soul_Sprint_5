@@ -48,10 +48,10 @@ const userController ={
 
         usersModel.create(userToCreate)
 
-        res.redirect('/')
+        res.redirect('/users/login')
     },
     loginProcess: (req,res)=>{
-        let userToLogin = usersModel.findField ('email',req.body.email)
+        let userToLogin = usersModel.findField ('email', req.body.email)
         
         if(userToLogin){
             let isOkThePasword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
