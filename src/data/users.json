@@ -81,5 +81,13 @@
   "fechaNacimiento": "2022-01-19",
   "avatar": "avatar-1642624380684.jpg",
   "id": 10
+ },
+ {
+  "nombre": "Usuario",
+  "email": "usuario@gmail.com",
+  "contraseña": "$2a$10$GmfD6V9J8A8dVVgJVx6Wye/rAYY0O5z5FcClxfsq9.DFFrI3LLuUC",
+  "fechaNacimiento": "2005-11-25",
+  "avatar": "avatar-1643157800582.png",
+  "id": 11
  }
 ]
