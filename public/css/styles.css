@@ -95,14 +95,14 @@
     border: solid 1px #334257;
     border-radius: 5px;
     background-color: #eee;
-    transform: translateX(-15px);
+    transform: translateX(-25px);
     z-index: 900;
     clip-path: var(--clip);
     transition: clip-path .3s;
 }
 
 .cont-i__lista--logged{
-    transform: translateX(-50px);
+    transform: translateX(-35px);
     padding: 10px;
     display: flex;
     flex-direction: column;
