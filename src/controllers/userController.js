@@ -67,7 +67,7 @@ const userController ={
             }
             return res.render('./users/login',{
                 errors: { 
-                    email: { msg: 'Las credenciales no son validas'},
+                    contraseña: { msg: 'La contraseña no es valida'},
                 },
                 oldData: req.body
             })

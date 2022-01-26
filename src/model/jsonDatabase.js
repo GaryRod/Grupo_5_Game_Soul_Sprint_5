@@ -78,7 +78,6 @@ const modelController = function (name) {
             let updatedRows = rows.filter(row => {
                 return row.id != id;
             });
-
             this.writeFile(updatedRows);
         },
         buscado: function (filtro) {
@@ -91,7 +90,6 @@ const modelController = function (name) {
             let userFound= allUsers.find(oneUser => oneUser[field] === text)
             return userFound;
         }
-        
     }
 }
 
