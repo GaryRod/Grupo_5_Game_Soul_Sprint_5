@@ -39,5 +39,10 @@ y tocar el piano.
 
 # Credenciales de usuario
 
+## Usuario común
 __Mail:__ usuario@gmail.com
+__Contraseña:__ 12345678
+
+## Administrador
+__Mail:__ admin@gamesoul.com
 __Contraseña:__ 12345678

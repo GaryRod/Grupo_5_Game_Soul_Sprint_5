@@ -43,7 +43,8 @@ const userController ={
         let userToCreate = {
             ...req.body,
             contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-            avatar: req.file.filename
+            avatar: req.file.filename,
+            isAdmin: String(req.body.email).includes('@gamesoul.com')
         }
 
         usersModel.create(userToCreate)
@@ -51,8 +52,9 @@ const userController ={
         res.redirect('/users/login')
     },
     loginProcess: (req,res)=>{
+
         let userToLogin = usersModel.findField ('email', req.body.email)
-        
+
         if(userToLogin){
             let isOkThePasword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
             if(isOkThePasword){

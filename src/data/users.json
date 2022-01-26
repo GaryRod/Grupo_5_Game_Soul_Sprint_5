@@ -3,7 +3,7 @@
   "id": 1,
   "nombre": "Usuario",
   "apellido": "Administrador",
-  "email": "admin@gamesoul.com",
+  "email": "admin@gmail.com",
   "contraseña": "admin12345",
   "categoria": "administrador",
   "imagen": ".../images/iconos/usuario-128px.png"
@@ -89,5 +89,32 @@
   "fechaNacimiento": "2005-11-25",
   "avatar": "avatar-1643157800582.png",
   "id": 11
+ },
+ {
+  "nombre": "Gary",
+  "email": "gary@gamesoul.com",
+  "contraseña": "$2a$10$K3MrnbMMLfQCOi/43GPYaevk.xtmgLSrHmSj5O21hxB3zMOP3/4oC",
+  "fechaNacimiento": "2022-02-03",
+  "avatar": "avatar-1643234190653.jpg",
+  "isAdmin": true,
+  "id": 12
+ },
+ {
+  "nombre": "Gary",
+  "email": "gary@gmail.com",
+  "contraseña": "$2a$10$uaJN2hRrCRw4ryTRUs.CLORjtYBMYCZeW74EY2PvbTtw6CLgGvjOi",
+  "fechaNacimiento": "2022-01-20",
+  "avatar": "avatar-1643234237210.jpg",
+  "isAdmin": false,
+  "id": 13
+ },
+ {
+  "nombre": "admin",
+  "email": "admin@gamesoul.com",
+  "contraseña": "$2a$10$beKqTHJ8tEEeC2/7.7xRsO0T8g8M48dm2gQ2eKsXmd8iaufcWO.jq",
+  "fechaNacimiento": "1997-07-17",
+  "avatar": "avatar-1643235648436.png",
+  "isAdmin": true,
+  "id": 14
  }
 ]

@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <% if (locals.isLogged) { %>
+            <% if (locals.isLogged && locals.userLogged.isAdmin) { %>
                 <div class="cont__edicion">
                     <a href="/products/edit/<%= producto.id %>" class="añadir__carrito-fav cont__edicion-editar">Editar Producto</a>
                     <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
