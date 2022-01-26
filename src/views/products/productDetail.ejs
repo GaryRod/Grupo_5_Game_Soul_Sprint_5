@@ -78,7 +78,7 @@
 
             <% if (locals.isLogged) { %>
                 <div class="cont__edicion">
-                    <a href="/products/<%= producto.id %>/edit" class="añadir__carrito-fav cont__edicion-editar">Editar Producto</a>
+                    <a href="/products/edit/<%= producto.id %>" class="añadir__carrito-fav cont__edicion-editar">Editar Producto</a>
                     <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
                         <button type="submit" class="action-button delete añadir__carrito-fav">Eliminar</button>
                     </form>

@@ -28,20 +28,20 @@
             <div class="form__seccion-categoria">
                 <h5 class="form__seccion-h5">Selecciona un género:</h5>
                 <select class="input__create-product" name="genero" required>
-                    <option value="accion">Acción</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="fps">FPS</option>
-                    <option value="estrategia">Estrategia</option>
-                    <option value="deportes">Deportes</option>
+                    <option value="accion" <% if (productToEdit.genero == 'accion') { %> selected <% } %>>Acción</option>
+                    <option value="aventura" <% if (productToEdit.genero == 'aventura') { %> selected <% } %>>Aventura</option>
+                    <option value="fps" <% if (productToEdit.genero == 'fps') { %> selected <% } %>>FPS</option>
+                    <option value="estrategia" <% if (productToEdit.genero == 'estrategia') { %> selected <% } %>>Estrategia</option>
+                    <option value="deportes" <% if (productToEdit.genero == 'deportes') { %> selected <% } %>>Deportes</option>
                 </select>
             </div>
 
             <div class="form__seccion-edicion">
                 <h5 class="form__seccion-h5">Selecciona una edición:</h5>
                 <select class="input__create-product" name="edicion" required>
-                    <option value="estandar">Estándar</option>
-                    <option value="deluxe">Deluxe</option>
-                    <option value="gold">Gold</option>
+                    <option value="estandar" <% if (productToEdit.edicion == 'estadar') { %> selected <% } %>>Estándar</option>
+                    <option value="deluxe" <% if (productToEdit.edicion == 'deluxe') { %> selected <% } %>>Deluxe</option>
+                    <option value="gold" <% if (productToEdit.edicion == 'gold') { %> selected <% } %>>Gold</option>
                 </select>
             </div>
 

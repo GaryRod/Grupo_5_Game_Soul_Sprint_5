@@ -63,11 +63,10 @@
   "id": 7,
   "nombre": "Inscryption",
   "descripcion": "Inscryption es un juego de cartas, una odisea negra como la tinta que mezcla el «roguelike» de creación de mazos, puzles de estilo «escape room» y terror psicológico en un batido con un toque de sangre. Pero más oscuros aún son los secretos inscritos en las cartas...",
-  "img": "inscryption-250px.jpg",
-  "categoria": "visited",
-  "edicion": "deluxe",
-  "genero": "estrategia",
-  "precio": "12.500"
+  "precio": "12.500",
+  "edicion": "estandar",
+  "img": "imagen-1643165410915.jpg",
+  "genero": "estrategia"
  },
  {
   "id": 8,
@@ -83,11 +82,10 @@
   "id": 9,
   "nombre": "God of War 4",
   "descripcion": "Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de los dioses y monstruos nórdicos. En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también.",
-  "img": "God_of_War-150px.jpg",
-  "categoria": "mas-vistos",
+  "precio": "10.000",
   "edicion": "estandar",
-  "genero": "accion",
-  "precio": "10.000"
+  "img": "imagen-1643165542890.jpg",
+  "genero": "aventura"
  },
  {
   "id": 10,
@@ -99,15 +97,5 @@
   "edicion": "estandar",
   "genero": "FPS",
   "precio": "10.500"
- },
- {
-  "id": 11,
-  "nombre": "SpiderMan",
-  "descripcion": "descripcion de spirderman",
-  "categoria": "visited",
-  "precio": "1010",
-  "edicion": "deluxe",
-  "img": "imagen-1640009441178.png",
-  "genero": "accion"
  }
 ]
