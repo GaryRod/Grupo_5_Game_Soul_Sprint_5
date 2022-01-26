@@ -13,15 +13,16 @@
 
             <div class="cont-i__cont-lista-icono">
                 <% if (locals.isLogged) { %>
-                    <a href="/users/userProfile"><img src="/images/iconos/user.svg" class="cont-i__iconos con-i__iconos--user"></a>
+                    <img src="/images/iconos/user.svg" class="cont-i__iconos con-i__iconos--user">
                 <% } else {%>
-                    <a href="#"><img src="/images/iconos/user.svg" class="cont-i__iconos con-i__iconos--user"></a>
+                    <img src="/images/iconos/user.svg" class="cont-i__iconos con-i__iconos--user">
                 <% } %>
 
                 <% if (locals.isLogged) { %>
                     <ul class="cont-i__lista cont-i__lista--logged">
                         <span class="cont-i__titulo">Hola <%= locals.userLogged.nombre %>  </span>
                         <img src="/images/iconosUsuarios/<%= locals.userLogged.avatar %>" alt="" class="cont-i__img">
+                        <a href="/users/userProfile" class="cont-i__enlaces">Ir al perfil</a>
                         <a href="/users/logout" class="cont-i__enlaces">Cerrar sesión</a>
                     </ul>
                 <% } else {%>
