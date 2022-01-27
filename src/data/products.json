@@ -97,5 +97,14 @@
   "edicion": "estandar",
   "genero": "FPS",
   "precio": "10.500"
+ },
+ {
+  "nombre": "nuevo",
+  "descripcion": "ajsñacjas",
+  "precio": "100",
+  "edicion": "deluxe",
+  "img": "imagen-1643252047200.png",
+  "genero": "fps",
+  "id": 11
  }
 ]

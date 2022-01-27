@@ -33,7 +33,7 @@ const userController ={
             return res.render('./users/register',{
                 errors: {
                     email: {
-                        msg: 'Este email ya esta registrado'
+                        msg: 'Este email ya está registrado'
                     }
                 },
                 oldData: req.body
@@ -69,7 +69,7 @@ const userController ={
             }
             return res.render('./users/login',{
                 errors: { 
-                    contraseña: { msg: 'La contraseña no es valida'},
+                    contraseña: { msg: 'La contraseña no es válida'},
                 },
                 oldData: req.body
             })

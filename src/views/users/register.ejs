@@ -50,7 +50,10 @@
 
                     <div class="contenedor-fechaDeNacimiento">
                         <label class="fechaDeNacimiento-registro">Fecha de nacimiento:</label>
-                        <input type="date" name="fechaNacimiento" class="input-fechaNacimiento" >
+                        <input type="date" name="fechaNacimiento" class="input-fechaNacimiento">
+                        <% if (locals.errors && errors.fechaNacimiento) { %>
+                            <p class="message-error"><%= errors.fechaNacimiento.msg %></p>
+                        <% } %>
                     </div>  
                     <div>
                         <label class="contenedor-avatar">Imagen de Perfil</label>
@@ -59,9 +62,13 @@
                             <p class="message-error"><%= errors.avatar.msg %></p>
                         <% } %>
                     </div>
-                    <div class="contenedor-tyc">
-                        <label for="tyc">Términos y condiciones</label>
-                        <input type="checkbox" id="tyc" class="input-checkbox" >
+                    <div class="contenedor-tyc" style="display: flex; flex-direction: column;">
+                        <label for="tyc">Términos y condiciones
+                            <input type="checkbox" id="tyc" class="input-checkbox" name="tyc">
+                        </label>
+                        <% if (locals.errors && errors.tyc) { %>
+                            <p class="message-error"><%= errors.tyc.msg %></p>
+                        <% } %>
                     </div> 
 
                     <div class="contenedor-botonCrear">        

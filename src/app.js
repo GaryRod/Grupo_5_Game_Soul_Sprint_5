@@ -35,7 +35,6 @@ app.set("views", path.resolve(__dirname, "./views"))
 
 // Requerimientos para formularios
 const methodOverride =  require('method-override'); 
-const cookieParser = require("cookie-parser");
 const { cookie } = require("express/lib/response");
 app.use(methodOverride('_method'));
 
