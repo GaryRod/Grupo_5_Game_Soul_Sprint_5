@@ -20,7 +20,6 @@ const userController ={
         const errores = validationResult(req);
         
         if (errores.errors.length > 0 ) {
-        
             return res.render('./users/register',{
                 errors: errores.mapped(),
                 oldData: req.body

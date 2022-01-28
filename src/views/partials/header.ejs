@@ -23,6 +23,10 @@
                         <span class="cont-i__titulo">Hola <%= locals.userLogged.nombre %>  </span>
                         <img src="/images/iconosUsuarios/<%= locals.userLogged.avatar %>" alt="" class="cont-i__img">
                         <a href="/users/userProfile" class="cont-i__enlaces">Ir al perfil</a>
+                        <% if (locals.isLogged 
+                        && locals.userLogged.isAdmin) { %>
+                            <a href="/products/create" class="cont-i__enlaces">Crear producto</a>
+                        <% } %>
                         <a href="/users/logout" class="cont-i__enlaces">Cerrar sesión</a>
                     </ul>
                 <% } else {%>
@@ -41,7 +45,6 @@
         <ul class="header__lista">
             <li class="header__items"><a href="/products/favoritos" class="header__enlaces">Favoritos</a></li>
             <li class="header__items"><a href="" class="header__enlaces">Ofertas</a></li>
-            <li class="header__items"><a href="/products/create" class="header__enlaces">Crear</a></li>
             <li class="header__items"><a href="" class="header__enlaces">Consolas</a>
                 <ul class="header__sublista">
                     <li class="header__subitems"><a href="#" class="header__subenlaces">XBOX</a></li>

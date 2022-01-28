@@ -1,3 +1,4 @@
+const { localsName } = require('ejs');
 const jsonDB = require('../model/jsonDatabase');
 const productModel = jsonDB('products');
 
@@ -14,6 +15,13 @@ const productController = {
     },
 	productCart: (req,res) => {
 		res.render('./products/productCart')
+	},
+	buyCart: (req, res) => {
+		// if (locals.IsLogged) {
+		// 	console.log('gracias por tu compra');
+		// 	res.redirect('/nada')
+		// }
+		res.redirect('/users/login')
 	},
 	createProduct: (req, res) => {
 		res.render('./products/createProduct')

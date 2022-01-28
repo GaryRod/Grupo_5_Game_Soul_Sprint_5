@@ -10,12 +10,13 @@ router.get('/', productController.products)
 
 router.get('/detail/:id', productController.productDetail);
 
-router.get('/productCart', authMiddleware, productController.productCart);
+router.get('/productCart', productController.productCart);
+router.post('/productCart', productController.buyCart);
 
-router.get('/create', productController.createProduct);
+router.get('/create', authMiddleware, productController.createProduct);
 router.post('/create', upload.single("imagen"), productController.store);
 
-router.get('/edit/:id', productController.editProduct);
+router.get('/edit/:id', authMiddleware, productController.editProduct);
 router.put('/edit/:id', upload.single("imagen"), productController.update);
 
 router.delete('/delete/:id', productController.destroy)
