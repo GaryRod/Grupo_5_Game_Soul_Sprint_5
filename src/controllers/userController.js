@@ -51,6 +51,14 @@ const userController ={
         res.redirect('/users/login')
     },
     loginProcess: (req,res)=>{
+        const errores = validationResult(req);
+        
+        if (errores.errors.length > 0 ) {
+            return res.render('./users/login',{
+                errors: errores.mapped(),
+                oldData: req.body
+            })
+        }
 
         let userToLogin = usersModel.findField ('email', req.body.email)
 

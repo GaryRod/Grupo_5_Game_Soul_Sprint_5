@@ -2,18 +2,18 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
 const userIconsUpload = require('../middlewares/userMulterMiddleware');
-const validaciones = require('../middlewares/validatorMiddleware');
-const validacionesMiddleware = require('../middlewares/validatorMiddleware');
+const validacionesLogin = require('../middlewares/validatorLoginMiddleware');
+const validacionesRegister = require('../middlewares/validatorRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/login', guestMiddleware, userController.login)
 
-router.post('/login', validaciones, userController.loginProcess)
+router.post('/login', validacionesLogin, userController.loginProcess)
 
 router.get('/register', guestMiddleware, userController.register)
 
-router.post('/register', userIconsUpload.single('avatar'), validacionesMiddleware, userController.registerProcess);
+router.post('/register', userIconsUpload.single('avatar'), validacionesRegister, userController.registerProcess);
 
 router.get('/userProfile', authMiddleware, userController.profile);
 
