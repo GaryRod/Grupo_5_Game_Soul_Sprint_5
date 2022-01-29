@@ -42,8 +42,13 @@ const userController ={
         let userToCreate = {
             ...req.body,
             contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-            avatar: req.file.filename,
             isAdmin: String(req.body.email).includes('@gamesoul.com')
+        }
+
+        if (req.file) {
+            userToCreate.avatar = req.file.filename
+        } else {
+            userToCreate.avatar = 'default.png'
         }
 
         usersModel.create(userToCreate)
